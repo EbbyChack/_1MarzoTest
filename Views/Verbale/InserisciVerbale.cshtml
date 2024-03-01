@@ -3,90 +3,95 @@
 
 <h2>Compilazione Verbale</h2>
 
-
+<hr />
 @using (Html.BeginForm("InserisciVerbale", "Verbale", FormMethod.Post)) 
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
 
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class=" d-flex justify-content-center">
+    <div class="form-horizontal bg-light col-3 p-3">
 
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.DataViolazione, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(model => model.DataViolazione, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
-            @Html.ValidationMessageFor(model => model.DataViolazione, "", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataViolazione, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.TextBoxFor(model => model.DataViolazione, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                @Html.ValidationMessageFor(model => model.DataViolazione, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.IndirizzoViolazione, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.IndirizzoViolazione, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.IndirizzoViolazione, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.IndirizzoViolazione, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.IndirizzoViolazione, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IndirizzoViolazione, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.NominativoAgente, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.NominativoAgente, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.NominativoAgente, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NominativoAgente, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.NominativoAgente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NominativoAgente, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.DataTrascrizioneVerbale, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(model => model.DataTrascrizioneVerbale, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
-            @Html.ValidationMessageFor(model => model.DataTrascrizioneVerbale, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataTrascrizioneVerbale, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.TextBoxFor(model => model.DataTrascrizioneVerbale, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                @Html.ValidationMessageFor(model => model.DataTrascrizioneVerbale, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Importo, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Importo, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Importo, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Importo, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.Importo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Importo, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.decurtazionePunti, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.decurtazionePunti, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.decurtazionePunti, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.decurtazionePunti, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.decurtazionePunti, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.decurtazionePunti, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Contestabile, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.Contestabile)
-                @Html.ValidationMessageFor(model => model.Contestabile, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contestabile, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Contestabile)
+                    @Html.ValidationMessageFor(model => model.Contestabile, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdAnagrafica, htmlAttributes: new { @class = "control-label col-12" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.IdAnagrafica, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdAnagrafica, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-12 mt-3  d-flex justify-content-center">
+                <input type="submit" value="Inserisci" class="btn btn-dark" />
             </div>
         </div>
     </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.IdAnagrafica, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.IdAnagrafica, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.IdAnagrafica, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10 mt-3">
-            <input type="submit" value="Inserisci" class="btn btn-dark" />
-        </div>
-    </div>
 </div>
+
+
+
 }
 
 
