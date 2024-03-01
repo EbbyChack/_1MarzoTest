@@ -1,7 +1,10 @@
 ﻿<!DOCTYPE html>
 <style>
     .customNav {
-        background: linear-gradient(#e89491 60%, #be7674 );
+        background: linear-gradient(#e89491 60%, #d88684 );
+    }
+    .customBody {
+        background: #ffe6e66c;
     }
 </style>
 <html>
@@ -33,13 +36,14 @@
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="container body-content customBody p-3 rounded-3">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
     </div>
+    <hr />
+    <footer class="px-5">
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
