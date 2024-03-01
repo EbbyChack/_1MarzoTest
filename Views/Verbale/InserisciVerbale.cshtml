@@ -1,6 +1,11 @@
 ﻿@model _1MarzoTest.Models.Verbale
 
-
+<style>
+    .customColor {
+        background:#e8949124;
+        
+    }
+</style>
 <h2>Compilazione Verbale</h2>
 
 <hr />
@@ -9,7 +14,7 @@
     @Html.AntiForgeryToken()
 
 <div class=" d-flex justify-content-center">
-    <div class="form-horizontal bg-light col-3 p-3">
+    <div class="form-horizontal customColor rounded-4 col-3 p-3">
 
 
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
