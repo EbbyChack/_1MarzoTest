@@ -1,5 +1,6 @@
 ﻿<main>
     <style>
+        /*hover per legend card*/
         .cardHover:hover {
             transform: scale(1.02); /* Adjust the scale factor as needed */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -8,6 +9,7 @@
         }
     </style>
 
+    @*messagio di benvenuto*@
     <div class="container">
         <div class="row my-3">
             <div class="jumbotron jumbotron-fluid">
@@ -23,6 +25,7 @@
             </div>
             <hr />
             <div class="col-3">
+                @*il click sulla card porta alla pagina di visualizzazione*@
                 <a href="@Url.Action("Uno", "Home")" class="text-decoration-none text-black">
                     <div class="card py-1 bg-secondary bg-opacity-10 border-0 rounded-5 cardHover" style="height:250px">
 

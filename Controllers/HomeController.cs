@@ -16,6 +16,8 @@ namespace _1MarzoTest.Controllers
             return View();
         }
 
+        //per ognugna delle card ce un action result e una view
+
         [HttpGet]
         public ActionResult Uno()
         {
@@ -33,9 +35,11 @@ namespace _1MarzoTest.Controllers
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader rdr = cmd.ExecuteReader();
+                    //creo una lista di oggetti 
                     List<Uno> uni = new List<Uno>();
                     while (rdr.Read())
                     {
+                        //creo un oggetto per ogni riga del db
                         Uno uno = new Uno();
 
                         uno.IdAnagrafica = (int)rdr["IdAnagrafica"];

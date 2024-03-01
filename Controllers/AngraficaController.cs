@@ -30,6 +30,7 @@ namespace _1MarzoTest.Controllers
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    //assegno i valori presi dal form alle variabili 
                     cmd.Parameters.AddWithValue("@Cognome", angrafica.Cognome);
                     cmd.Parameters.AddWithValue("@Nome", angrafica.Nome);
                     cmd.Parameters.AddWithValue("@Indirizzo", angrafica.Indirizzo);

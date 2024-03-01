@@ -12,6 +12,7 @@ namespace _1MarzoTest.Controllers
     public class VerbaleController : Controller
     {
         // GET: Verbale
+        //per visualizzare tutti i verbali contestabili
         [HttpGet]
         public ActionResult Index()
         {
@@ -26,9 +27,11 @@ namespace _1MarzoTest.Controllers
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader rdr = cmd.ExecuteReader();
+                    //creo una lista di oggetti
                     List<Verbale> verbali = new List<Verbale>();
                     while (rdr.Read())
                     {
+                        //creo un oggetto per ogni riga del db
                         Verbale verbale = new Verbale();
 
                         verbale.IdVerbale = (int)rdr["IdVerbale"];
@@ -41,7 +44,7 @@ namespace _1MarzoTest.Controllers
                         verbale.Contestabile = (bool)rdr["Contestabile"];
                         verbale.IdAnagrafica =(int)rdr["IdAnagrafica"];
                         
-
+                        //inserisco l'oggetto nella lista
                         verbali.Add(verbale);
                     }
                     return View(verbali);
@@ -55,6 +58,8 @@ namespace _1MarzoTest.Controllers
         {
             return View();
         }
+
+        //per inserire un verbale
 
         [HttpPost]
         public ActionResult InserisciVerbale(Verbale verbale)
@@ -71,6 +76,7 @@ namespace _1MarzoTest.Controllers
                 System.Diagnostics.Debug.WriteLine(verbale.DataViolazione);
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    //assegno i valori presi dal form alle variabili
                     cmd.Parameters.AddWithValue("@DataViolazione", verbale.DataViolazione.Date);
                     cmd.Parameters.AddWithValue("@IndirizzoViolazione", verbale.IndirizzoViolazione);
                     cmd.Parameters.AddWithValue("@NominativoAgente", verbale.NominativoAgente);
