@@ -127,6 +127,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Angrafica.cs" />
+    <Compile Include="Models\Due.cs" />
+    <Compile Include="Models\Tre.cs" />
+    <Compile Include="Models\Uno.cs" />
     <Compile Include="Models\Verbale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -182,6 +185,10 @@
     <Content Include="Views\Angrafica\Index.cshtml" />
     <Content Include="Views\Verbale\Index.cshtml" />
     <Content Include="Views\Verbale\InserisciVerbale.cshtml" />
+    <Content Include="Views\Home\Uno.cshtml" />
+    <Content Include="Views\Home\Due.cshtml" />
+    <Content Include="Views\Home\Tre.cshtml" />
+    <Content Include="Views\Home\Quattro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

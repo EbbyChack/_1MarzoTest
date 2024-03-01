@@ -1,0 +1,48 @@
+﻿@model List<_1MarzoTest.Models.Tre>
+
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DecurtamentoPunti)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cognome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+        </td>
+       
+    </tr>
+}
+
+</table>

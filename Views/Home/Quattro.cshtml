@@ -1,0 +1,69 @@
+﻿@model List<_1MarzoTest.Models.Verbale>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().IdVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().IndirizzoViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NominativoAgente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DataTrascrizioneVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().decurtazionePunti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Contestabile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().IdAnagrafica)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdVerbale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndirizzoViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NominativoAgente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataTrascrizioneVerbale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.decurtazionePunti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contestabile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdAnagrafica)
+        </td>
+       
+    </tr>
+}
+
+</table>

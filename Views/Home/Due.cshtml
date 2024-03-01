@@ -1,0 +1,37 @@
+﻿@model List<_1MarzoTest.Models.Due>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().IdAnagrafica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TotalePuntiDecurtati)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdAnagrafica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cognome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalePuntiDecurtati)
+        </td>
+    </tr>
+}
+
+</table>
